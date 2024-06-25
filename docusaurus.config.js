@@ -60,6 +60,7 @@ const config = {
             to: 'https://polkadothungary.net', 
             label: 'Vissza a blogra', 
             position: 'left', 
+            target: '_self', 
           },
         ],
       },
