@@ -3,49 +3,90 @@ import React from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { HumanReadable } from "./utilities/filters";
 
+const cache = {
+  minNominatorBond: null,
+  minimumActiveStake: null,
+  lastFetch: null,
+};
+
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
+
 function MinimumStake({ network, defaultValue }) {
-  const [returnValue, setReturnValue] = useState('');
+  const [minNominatorBond, setMinNominatorBond] = useState('');
+  const [minimumActiveStake, setMinimumActiveStake] = useState('');
+  const [debugInfo, setDebugInfo] = useState('');
 
-  useEffect(async () => {
-    // Set defaults based on network
-    let wsUrl = undefined;
-    if (network === "polkadot") { wsUrl = "wss://rpc.polkadot.io" }
-    else if (network === "kusama") { wsUrl = "wss://kusama-rpc.polkadot.io/" }
-    else { return (<div />) }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let wsUrl;
+        if (network === "polkadot") {
+          wsUrl = "wss://rpc.polkadot.io";
+        } else if (network === "kusama") {
+          wsUrl = "wss://kusama-rpc.polkadot.io/";
+        } else {
+          return;
+        }
 
-    // Set default value to render on component
-    HumanReadable(defaultValue, network, setReturnValue);
-    // Calculate a more accurate approximation using on-chain data
-    await CalcValidatorMinStake(network, wsUrl, setReturnValue);
-  }, []);
+        console.log(`Using network: ${network}`);
+        console.log(`WebSocket URL: ${wsUrl}`);
+        setDebugInfo(prev => `${prev}\nUsing network: ${network}\nWebSocket URL: ${wsUrl}`);
 
-  return (returnValue);
+        const currentTime = new Date().getTime();
+
+        if (cache.lastFetch && (currentTime - cache.lastFetch) < CACHE_DURATION) {
+          setMinNominatorBond(cache.minNominatorBond);
+          setMinimumActiveStake(cache.minimumActiveStake);
+          console.log("Using cached values");
+          setDebugInfo(prev => `${prev}\nUsing cached values`);
+        } else {
+          HumanReadable(defaultValue, network, setMinNominatorBond);
+
+          await fetchMinimumBondAndStake(network, wsUrl, setMinNominatorBond, setMinimumActiveStake, setDebugInfo);
+
+          cache.lastFetch = currentTime;
+          cache.minNominatorBond = minNominatorBond;
+          cache.minimumActiveStake = minimumActiveStake;
+        }
+      } catch (error) {
+        console.error("Error in fetchData:", error);
+        setDebugInfo(prev => `${prev}\nError in fetchData: ${error.message}`);
+      }
+    };
+
+    fetchData();
+  }, [network, defaultValue]);
+
+  return (
+    <div>
+      <div>Minimum Nominator Bond: {minNominatorBond}</div>
+      <div>Minimum Active Stake: {minimumActiveStake}</div>
+      <pre>{debugInfo}</pre>
+    </div>
+  );
 }
 
-async function CalcValidatorMinStake(network, wsUrl, setReturnValue) {
-  const wsProvider = new WsProvider(wsUrl);
-  const api = await ApiPromise.create({ provider: wsProvider })
+async function fetchMinimumBondAndStake(network, wsUrl, setMinNominatorBond, setMinimumActiveStake, setDebugInfo) {
+  try {
+    const wsProvider = new WsProvider(wsUrl);
+    const api = await ApiPromise.create({ provider: wsProvider });
 
-  const [currentValidators, currentEra] = await Promise.all([
-    api.query.session.validators(),
-    api.query.staking.currentEra(),
-  ]);
+    // Fetching minimum nominator bond
+    const minNominatorBond = await api.query.staking.minNominatorBond();
+    console.log("Minimum Nominator Bond:", minNominatorBond.toString());
+    setDebugInfo(prev => `${prev}\nMinimum Nominator Bond: ${minNominatorBond.toString()}`);
+    HumanReadable(minNominatorBond.toString(), network, setMinNominatorBond);
 
-  // Get stake for current era and first validator
-  const validatorStake = await api.query.staking.erasStakers(currentEra.toString(), currentValidators[0])
-  let validatorMinStake = parseInt(validatorStake.total)
+    // Fetching minimum active stake
+    const minimumActiveStake = await api.query.staking.minimumActiveStake();
+    console.log("Minimum Active Stake:", minimumActiveStake.toString());
+    setDebugInfo(prev => `${prev}\nMinimum Active Stake: ${minimumActiveStake.toString()}`);
+    HumanReadable(minimumActiveStake.toString(), network, setMinimumActiveStake);
 
-  // Iterate era validators
-  const validators = await api.query.staking.erasStakers.entries(currentEra.toString());
-  validators.forEach(([key, validator]) => {
-    const validatorTotalStake = parseInt(validator.total);
-    if (validatorTotalStake < validatorMinStake) {
-      validatorMinStake = validatorTotalStake;
-    }
-  });
-  
-  const result = validatorMinStake.toString();
-  HumanReadable(result, network, setReturnValue);
+  } catch (error) {
+    console.error("Error in fetchMinimumBondAndStake:", error);
+    setDebugInfo(prev => `${prev}\nError in fetchMinimumBondAndStake: ${error.message}`);
+  }
 }
 
 export default MinimumStake;

@@ -17,7 +17,9 @@
     "@docusaurus/core": "3.2.1",
     "@docusaurus/preset-classic": "3.2.1",
     "@mdx-js/react": "^3.0.0",
+    "@polkadot/api": "^12.1.1",
     "clsx": "^2.0.0",
+    "polkadot": "^1.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

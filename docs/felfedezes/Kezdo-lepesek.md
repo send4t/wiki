@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import PolkadotInfo from '../../components/polkadotInfo';
+
 # Kezdő lépések
 ---
 
@@ -14,7 +16,6 @@ A Wiki három fő részből áll:
 - [**Tanulás**](../hamarosan/forditas-alatt.md)  (akik tanulni szeretnének a Polkadot-ról)
 - [**Fejlesztése**](../hamarosan/forditas-alatt.md)  (akik feljeszteni szeretnének a Polkadot-on)
 - [**Karbantartás**](../hamarosan/forditas-alatt.md) (akik karbantartásban vennének részt)
-
 
 :::
 
@@ -70,18 +71,5 @@ A Polkadot absztrakciós és általános alkalmazási szintje lehetővé teszi, 
 
 A DOT a Polkadot Network natív tokenje, és tranzakciós díjakra, stakelésre, kormányzásra, parachain slot megszerzésére, illetve a Polkadot számos kulcsfontosságú funkciójának engedélyezésére használható.
 
-* **1 DOT:** A Polkadot Networkön az aktív accounthoz szükséges minimális egyenleg. Ha az egyenleg a minimum alá csökken, az account megszűnik.
-* **1 DOT:** a minimálisan szükséges hozzájárulás ahhoz, hogy csatlakozhass egy nomination poolhoz, és a hálózat biztonságához való hozzájárulásért staking rewardokat kapj.
-* **5 DOT:** a minimálisan szükséges hozzájárulás a crowdloans parachain slot aukciókon való részvételhez.
-* **Körülbelül 20 DOT:**
-* **20,258 DOT:** on-chain identitás regisztrálása
-* **20,008 DOT:** proxy fiók létrehozása
-* **250 DOT:** a validátorok közvetlen jelölésére irányuló szándék benyújtásához szükséges minimális stake.
-* **555 DOT (folyamatosan változik):** a minimális DOT mennyiség, ami az aktív nominátorrá váláshoz és a rewardok megszerzéséhez szükséges, azaz ez a minimális aktív stake mennyiség. A stake rewardok megszerzésének esélye növekszik, ha a stake mennyisége nem kevesebb, mint az aktív nominátorok közötti a minimális stake mennyiség, ami egy dinamikus küszöbérték. Ha a minimális aktív nominátoroknál kevesebb DOT-tal rendelkezel, fontold meg, hogy egy nomination poolhoz csatlakozz.[ Csatlakozz a Polkadot Hungary Pool-hoz.](https://polkadot.subscan.io/nomination%5Fpool/219)
-* **500 DOT:** a saját nomination pool létrehozásának díja.
-
-A DOT egy utility token a Polkadot OpenGov-ban. A DOT bonding *(lekötés)* az indítványok létrehozásának, támogatásának és a népszavazáson való szavazásnak a feltétele.
-
-A DOT révén az olyan programokban való részvétel is lehetségessé válik, mint a **Thousand Validators Program**, erről egy későbbi cikkben lesz szó.
-
-
+# Polkadot Requirements
+<PolkadotInfo />
