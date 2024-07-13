@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 import PolkadotInfo from '../../components/polkadotInfo';
+import Footer from '../../components/footerMildzsu';
 
 # Kezdő lépések
 ---
@@ -44,6 +45,7 @@ A Polkadot, a Parity, a Web 3.0, és a bonyolult világ a blokkláncban - Dr. Wo
 ## **Alapítók**
 
 ### ![](https://lh7-us.googleusercontent.com/SYQXI-SMxUKU4S4NzQ5GRcnW3zfereLO0WFpjvN4oWCjgakBqTlqgZCGSBeq6yDLvu97uLIRFOKCSPpMYg-bQugU4LLyW9oTdcGNeBm5C1TWtsNRTAv-fVbacpo6Ck4gOCWojVZfLnv4Nfa05WaN6iI)
+
 **Robert Habermeier**
 
 ### **Robert Habermeier** 
@@ -73,3 +75,11 @@ A DOT a Polkadot Network natív tokenje, és tranzakciós díjakra, stakelésre,
 
 # Polkadot Requirements
 <PolkadotInfo />
+
+
+A DOT egy utility token a Polkadot OpenGov-ban. A DOT bonding *(lekötés)* az indítványok létrehozásának, támogatásának és a népszavazáson való szavazásnak a feltétele.
+
+A DOT révén az olyan programokban való részvétel is lehetségessé válik, mint a **Thousand Validators Program**, erről egy későbbi cikkben lesz szó.
+
+<Footer />
+

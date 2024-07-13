@@ -43,3 +43,16 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Styling for paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+/* Styling for ## marked titles */
+h2 {
+  font-size: 1.4rem;
+}
