@@ -46,7 +46,6 @@ A Polkadot, a Parity, a Web 3.0, és a bonyolult világ a blokkláncban - Dr. Wo
 
 ### ![](https://lh7-us.googleusercontent.com/SYQXI-SMxUKU4S4NzQ5GRcnW3zfereLO0WFpjvN4oWCjgakBqTlqgZCGSBeq6yDLvu97uLIRFOKCSPpMYg-bQugU4LLyW9oTdcGNeBm5C1TWtsNRTAv-fVbacpo6Ck4gOCWojVZfLnv4Nfa05WaN6iI)
 
-**Robert Habermeier**
 
 ### **Robert Habermeier** 
 a Thiel Fellow tagja, kutatási és fejlesztési háttérrel a blokkláncok, elosztott rendszerek és kriptográfiában. Régóta tagja a Rust közösségnek, és azon dolgozott, hogy kihasználja a nyelv funkcióit, és nagyon párhuzamos és hatékony megoldásokat építsen.
@@ -73,7 +72,7 @@ A Polkadot absztrakciós és általános alkalmazási szintje lehetővé teszi, 
 
 A DOT a Polkadot Network natív tokenje, és tranzakciós díjakra, stakelésre, kormányzásra, parachain slot megszerzésére, illetve a Polkadot számos kulcsfontosságú funkciójának engedélyezésére használható.
 
-# Polkadot Requirements
+## Szükséges token mennyiség különböző műveletekhez
 <PolkadotInfo />
 
 

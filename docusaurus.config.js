@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Polkadot Hungary WIKI',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Polkadot magyar tudásbázis',
   favicon: 'img/polkadotHU.png',
 
   // Set the production url of your site here

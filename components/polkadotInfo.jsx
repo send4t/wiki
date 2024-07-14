@@ -56,7 +56,7 @@ const PolkadotInfo = () => {
         <li><strong>{data.basicDeposit}</strong>: on-chain identitás regisztrálása</li>
         <li><strong>{data.proxyDepositBase}</strong>: proxy fiók létrehozása</li>
         <li><strong>{data.minNominatorBond}</strong>: a validátorok közvetlen jelölésére irányuló szándék benyújtásához szükséges minimális stake.</li>
-        <li><strong>{data.minimumActiveStake}</strong> (folyamatosan változik): a minimális DOT mennyiség, ami az aktív nominátorrá váláshoz és a rewardok megszerzéséhez szükséges, azaz ez a minimális aktív stake mennyiség. A stake rewardok megszerzésének esélye növekszik, ha a stake mennyisége nem kevesebb, mint az aktív nominátorok közötti a minimális stake mennyiség, ami egy dinamikus küszöbérték. Ha a minimális aktív nominátoroknál kevesebb DOT-tal rendelkezel, fontold meg, hogy egy nomination poolhoz csatlakozz.</li>
+        <li><strong>{data.minimumActiveStake}</strong> : a minimális DOT mennyiség, ami az aktív nominátorrá váláshoz és a rewardok megszerzéséhez szükséges, azaz ez a minimális aktív stake mennyiség. A stake rewardok megszerzésének esélye növekszik, ha a stake mennyisége nem kevesebb, mint az aktív nominátorok közötti a minimális stake mennyiség, ami egy dinamikus küszöbérték. Ha a minimális aktív nominátoroknál kevesebb DOT-tal rendelkezel, fontold meg, hogy egy nomination poolhoz csatlakozz.</li>
         <li><strong>{data.minCreateBond}</strong>: a saját nomination pool létrehozásának díja.</li>
       </ul>
     </div>

@@ -7,6 +7,9 @@
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
+/* Include Segoe UI font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 @font-face {
   font-family: 'Unbounded-Regular';
   src: url('../../static/font/Unbounded-Regular.woff2') format('woff2');
@@ -50,6 +53,15 @@ p {
   margin-bottom: 15px;
   letter-spacing: 0.3px;
   line-height: 1.5;
+  font-family: 'Inter', Arial, sans-serif; /* Added Segoe UI font */
+}
+
+li {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  font-family: 'Inter', Arial, sans-serif;  /* Added Segoe UI font */
 }
 
 /* Styling for ## marked titles */
