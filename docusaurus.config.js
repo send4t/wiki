@@ -18,7 +18,6 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -88,6 +87,18 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  // Add the GA4 script here
+  scripts: [
+    {
+      src: `https://www.googletagmanager.com/gtag/js?id=G-WST7X5VL4W`,
+      async: true,
+    },
+    {
+      src: '/js/ga.js',
+      async: true,
+    },
+  ],
 };
 
 export default config;
