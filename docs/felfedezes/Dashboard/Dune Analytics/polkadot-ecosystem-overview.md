@@ -11,14 +11,14 @@ Ebben az áttekintésben betekintést nyújtunk a Polkadot ökoszisztéma dinami
 **Áttekintés a Dune-on**: [Polkadot és Parachainek ökoszisztéma mérőszámai](https://dune.com/substrate/polkadot)
 
 :::info
-Ez az oldal csak egy magas szintű áttekintést ad az ökoszisztéma metrikáiról. A mélyreható elemzésért kérjük, látogass el a [Polkadot Dashboards](LINK) és a [Parachain Dashboards](LINK) kategóriákba.
+Ez az oldal csak egy magas szintű áttekintést ad az ökoszisztéma metrikáiról. A mélyreható elemzésért kérjük, látogass el a Polkadot Dashboards és a Parachain Dashboards kategóriákba.
 
 A következő témák például érdekelhetik:
 
-A stabilcoinok esetében látogass el az [Asset Hub Dashboards](dune-analytics/parachain-dashboards/assethub-dashboards) oldalra.
-A Polkadot relay-chain treasury esetében látogass el a [Polkadot Dashboards Governance](dune-analytics/polkadot-dashboards/polkadot-dashboards-governance) oldalra.
-A Polkadot tétgyűjtéshez látogass el a [Polkadot Dashboards Staking](dune-analytics/polkadot-dashboards/polkadot-dashboards-staking) oldalra.
-NFT-k esetében látogass el az [Unique Dashboards](dune-analytics/parachain-dashboards/unique-dashboards) oldalra.
+A stabilcoinok esetében látogass el az Asset Hub Dashboards oldalra.
+A Polkadot relay-chain treasury esetében látogass el a Polkadot Dashboards Governanceoldalra.
+A Polkadot tétgyűjtéshez látogass el a Polkadot Dashboards Staking oldalra.
+NFT-k esetében látogass el az Unique Dashboards oldalra.
 :::
 
 ### Aktivitás metrikák
