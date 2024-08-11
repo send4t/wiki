@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Polkadot Staking Dashboard
+# Parity Data dashboards
 
 <iframe src="https://dune.com/embeds/3547412/5969453/" height="850" width="100%"></iframe>
