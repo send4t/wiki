@@ -14,9 +14,6 @@ A Polkadot Wiki a Polkadot központi tudástára. A Web3 Foundation által vezet
 
 A Wiki három fő részből áll:
 
-- [**Tanulás**](../hamarosan/forditas-alatt.md)  (akik tanulni szeretnének a Polkadot-ról)
-- [**Fejlesztése**](../hamarosan/forditas-alatt.md)  (akik feljeszteni szeretnének a Polkadot-on)
-- [**Karbantartás**](../hamarosan/forditas-alatt.md) (akik karbantartásban vennének részt)
 
 :::
 
