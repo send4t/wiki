@@ -22,23 +22,23 @@ Nézd meg az alábbi videót a delegálás lépéseinek vizuális bemutatásáho
 ### 2. Csatlakoztasd a pénztárcádat
 
 - Kattints a jobb felső sarokban található **"Login"**  gombra.
-![Pénztárca csatlakoztatása](./img/login1.jpg)
+![Pénztárca csatlakoztatása](./img/login1.JPG)
 - Válaszd ki a Polkadot-kompatibilis pénztárcádat, majd írd alá a csatlakozási kérelmet.
 
-![Pénztárca csatlakoztatása](./img/login2.jpg)
+![Pénztárca csatlakoztatása](./img/login2.JPG)
 
 ### 3. Navigálj a delegálási szekcióhoz
 
 - A menüben keresd meg és kattints a **"Delegálás"** (vagy "Delegate") gombra.
 
-![Delegálás menüpont](./img/delegation.jpg)
+![Delegálás menüpont](./img/delegation.JPG)
 
 ### 4. Keresd meg a Magyar Polkadot DAO-t
 
 - A keresősávba írd be: **"Hun"**, hogy megtaláld a **Magyar Polkadot DAO**-t.
 - Kattints a mellette lévő **"Delegálás"** gombra.
 
-![Magyar Polkadot DAO keresése](./img/hun.jpg)
+![Magyar Polkadot DAO keresése](./img/hun.JPG)
 
 ### 5. Állítsd be a delegálás paramétereit
 
@@ -50,7 +50,7 @@ Nézd meg az alábbi videót a delegálás lépéseinek vizuális bemutatásáho
     - **6x szorzó**: A tokenek 226 napig zárolva maradnak.
 - **Megjegyzés**: A tokenek a pénztárcádban maradnak, csak a szavazati erőt delegálod.
 
-![Delegálás beállítása](./img/parameters.jpg)
+![Delegálás beállítása](./img/parameters.JPG)
 
 ### 6. Válaszd ki a delegálás témáit
 
